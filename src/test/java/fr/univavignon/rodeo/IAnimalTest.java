@@ -59,10 +59,5 @@ public class IAnimalTest {
 
     }
     
-    @Test
-    public void testisgetXP(){
-    assertEquals(animal.getXP(),8);
-   
-
-    }
+    
 }
