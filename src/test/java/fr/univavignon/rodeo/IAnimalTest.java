@@ -1,51 +1,63 @@
 package fr.univavignon.rodeo;
 
-import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
-import org.mockito.Mockito;
 
 import fr.univavignon.rodeo.api.IAnimal;
 
+import org.junit.*;
+import org.mockito.*;
 
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.mock;
 
-public class IAnimalTest  {
-	
-	public static IAnimal createMock(int xp, boolean secret, boolean endagered, boolean boss) {
-		IAnimal iAnimal = Mockito.mock(IAnimal.class);
-		Mockito.when(iAnimal.getXP()).thenReturn(xp);
-		Mockito.when(iAnimal.isSecret()).thenReturn(secret);
-		Mockito.when(iAnimal.isEndangered()).thenReturn(endagered);
-		Mockito.when(iAnimal.isBoss()).thenReturn(boss);
-		return iAnimal;
-}
-	public IAnimal getMock() {
-		return createMock(1899,true,false,true);
-		
-	}
-	
-		
+public class IAnimalTest {
 
-	@Test
-	public void testgetXP(){
-		assertEquals(1899,createMock(1899,true,false,true).getXP());
-	}
-	
-	@Test
-	public void testIsBoss(){
-		assertEquals(true,createMock(1899,true,false,true).isBoss());
-	}
-	
-	
-	@Test
-	public void testIsEndangered(){
-		assertEquals(false,createMock(1899,true,false,true).isEndangered());
-	}
-	
-	@Test
-	public void testIsSecret(){
-		assertEquals(true,createMock(1899,true,false,true).isSecret());
-		
-	}
-	
+    IAnimal animal;
+   
+    @Before
+    public  void getInstance(){
+        animal=mock(IAnimal.class);
+    when(animal.isBoss()).thenReturn(false);
+    when(animal.getName()).thenReturn("chat");
+    when(animal.getXP()).thenReturn(8);
+    when(animal.isSecret()).thenReturn(true);
+    
+    when(animal.isEndangered()).thenReturn(false);
+    
+   
+
+    }
+   
+ 
+   
+    @Test
+    public void testIsBoss(){
+    assertEquals(false,animal.isBoss());
+    System.out.println(animal.getXP());
+
+    }
+    
+    
+    @Test
+    public void testIsSecret(){
+    assertEquals(true,animal.isSecret());
+   
+
+    }
+    
+    @Test
+    public void testisEndangered(){
+    assertEquals(false,animal.isEndangered());
+   
+
+    }
+    @Test
+    public void testisgetName(){
+    assertEquals("chat",animal.getName());
+   
+
+    }
+    
+    
 }
