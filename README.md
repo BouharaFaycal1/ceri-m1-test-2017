@@ -13,6 +13,10 @@
 - [TP2 : Continous integration and quality assesment](https://github.com/Faylixe/ceri-m2-test-2017/blob/master/docs/tp2.md)
 - [TP3 : Unit testing](https://github.com/Faylixe/ceri-m2-test-2017/blob/master/docs/tp3.md)
 
+
+###Author
+- [Binômes: BOUHARA Fayçal & KHARMOUCH Anas]
+
 ### External
 
 - [JUnit 5 documentation](http://junit.org/junit5/docs/current/user-guide)
