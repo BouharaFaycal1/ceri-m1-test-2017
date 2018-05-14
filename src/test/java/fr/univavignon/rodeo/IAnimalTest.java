@@ -19,8 +19,12 @@ public class IAnimalTest {
     public  void getInstance(){
         animal=mock(IAnimal.class);
     when(animal.isBoss()).thenReturn(false);
-    when(animal.getName()).thenReturn("Anas");
-    when(animal.getXP()).thenReturn(12);
+    when(animal.getName()).thenReturn("chat");
+    when(animal.getXP()).thenReturn(8);
+    when(animal.isSecret()).thenReturn(true);
+    
+    when(animal.isEndangered()).thenReturn(false);
+    
    
 
     }
@@ -28,9 +32,37 @@ public class IAnimalTest {
  
    
     @Test
-    public void testBlabla(){
+    public void testIsBoss(){
     assertEquals(false,animal.isBoss());
     System.out.println(animal.getXP());
+
+    }
+    
+    
+    @Test
+    public void testIsSecret(){
+    assertEquals(true,animal.isSecret());
+   
+
+    }
+    
+    @Test
+    public void testisEndangered(){
+    assertEquals(false,animal.isEndangered());
+   
+
+    }
+    @Test
+    public void testisgetName(){
+    assertEquals("chat",animal.getName());
+   
+
+    }
+    
+    @Test
+    public void testisgetXP(){
+    assertEquals(animal.getXP(),8);
+   
 
     }
 }
