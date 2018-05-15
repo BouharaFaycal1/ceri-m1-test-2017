@@ -21,15 +21,15 @@ import fr.univavignon.rodeo.api.ISpecie;
 
 public class ISpecieTest {
 	
-	IAnimal animal;
+	static IAnimal animal;
 
-	ISpecie specie;
+	static ISpecie specie;
 	
-	ArrayList<IAnimal> listAnimal;	
+	static ArrayList<IAnimal> listAnimal;	
 	
 	
-	 @Before
-	    public  void getInstance(){
+
+	    public static  ISpecie getInstance(){
 	        specie=Mockito.mock(ISpecie.class);
 	        Mockito.when(specie.getArea()).thenReturn(1);
 	        animal= IAnimalTest.getInstance();
@@ -40,18 +40,27 @@ public class ISpecieTest {
 	        
 	        Mockito.when(specie.getAnimals()).thenReturn(listAnimal);
 	        Mockito.when(specie.getName()).thenReturn("chien");
+	        return specie;
 	        
 	 }
+	 
+	 public  ISpecie getMockSpecie(){
+	    	
+	    	return getInstance();
+	    	
+	    	
+	    }
 	   
 	  @Test
 	  public void testGetArea(){
-		
+		  specie =getMockSpecie();
 		  assertEquals(1, specie.getArea());  
 
 	    }
 	  
 	  @Test
-	  public void testGetAnimals(){		
+	  public void testGetAnimals(){	
+		  specie =getMockSpecie();
 		  assertEquals(listAnimal, specie.getAnimals());  
 
 	    }
