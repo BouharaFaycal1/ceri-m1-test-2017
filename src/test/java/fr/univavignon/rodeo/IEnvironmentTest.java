@@ -40,13 +40,7 @@ public class IEnvironmentTest {
 	        
 	 }
 	 
-	 public  IEnvironment getMockEnvironement(){
-	    	
-	    	return MockEnvironement();
-	    	
-	    	
-	    }
-	 
+	
 	 @Test
 	 public void testGetAreas(){
 		environement=MockEnvironement();
@@ -58,7 +52,7 @@ public class IEnvironmentTest {
 	 
 	 @Test
 	 public void testGetSpecies(){
-		 environement=getMockEnvironement();
+		 environement=MockEnvironement();
 		 assertEquals(listSpecies,environement.getSpecies());
 		 
 		 
