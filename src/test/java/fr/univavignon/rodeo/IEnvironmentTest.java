@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.omg.CORBA.Environment;
@@ -22,12 +23,12 @@ public class IEnvironmentTest {
 	static ArrayList<ISpecie> listSpecies;	
 	static IEnvironment environement;
 
-
-	    public static  IEnvironment getInstance(){
+		
+	    public static  IEnvironment MockEnvironement(){
 	        environement=Mockito.mock(IEnvironment.class);
 	        
 	        Mockito.when(environement.getAreas()).thenReturn(1);
-	        specie= ISpecieTest.getInstance();
+	        specie= ISpecieTest.MockSpecie();
 	        
 	        listSpecies = new ArrayList();
 	        listSpecies.add(specie);
@@ -41,14 +42,14 @@ public class IEnvironmentTest {
 	 
 	 public  IEnvironment getMockEnvironement(){
 	    	
-	    	return getInstance();
+	    	return MockEnvironement();
 	    	
 	    	
 	    }
 	 
 	 @Test
 	 public void testGetAreas(){
-		 environement=getMockEnvironement();
+		environement=MockEnvironement();
 	assertEquals(1,environement.getAreas());	 
 		 
 		 

@@ -28,11 +28,11 @@ public class ISpecieTest {
 	static ArrayList<IAnimal> listAnimal;	
 	
 	
-
-	    public static  ISpecie getInstance(){
+		
+	    public static  ISpecie MockSpecie(){
 	        specie=Mockito.mock(ISpecie.class);
 	        Mockito.when(specie.getArea()).thenReturn(1);
-	        animal= IAnimalTest.getInstance();
+	        animal= IAnimalTest.MockAnimal();
 	        
 	        listAnimal = new ArrayList();
 	        listAnimal.add(animal);
@@ -44,23 +44,18 @@ public class ISpecieTest {
 	        
 	 }
 	 
-	 public  ISpecie getMockSpecie(){
-	    	
-	    	return getInstance();
-	    	
-	    	
-	    }
+	
 	   
 	  @Test
 	  public void testGetArea(){
-		  specie =getMockSpecie();
+		  specie =MockSpecie();
 		  assertEquals(1, specie.getArea());  
 
 	    }
 	  
 	  @Test
 	  public void testGetAnimals(){	
-		  specie =getMockSpecie();
+		  specie =MockSpecie();
 		  assertEquals(listAnimal, specie.getAnimals());  
 
 	    }
