@@ -19,7 +19,7 @@ public class IAnimalTest {
     public  void getInstance(){
         animal=mock(IAnimal.class);
     when(animal.isBoss()).thenReturn(false);
-    when(animal.getName()).thenReturn("chat");
+    when(animal.getName()).thenReturn("bimbo");
     when(animal.getXP()).thenReturn(8);
     when(animal.isSecret()).thenReturn(true);
     
@@ -54,7 +54,7 @@ public class IAnimalTest {
     }
     @Test
     public void testisgetName(){
-    assertEquals("chat",animal.getName());
+    assertEquals("bimbo",animal.getName());
    
 
     }
