@@ -39,22 +39,28 @@ public class ISpecieTest {
 	        
 	        
 	        Mockito.when(specie.getAnimals()).thenReturn(listAnimal);
-	        Mockito.when(specie.getName()).thenReturn("la race");
+	        Mockito.when(specie.getName()).thenReturn("chien");
 	        
 	 }
 	   
 	  @Test
 	  public void testGetArea(){
 		
-		  assertEquals(1, specie.getArea());
-		  
-		  
-		  
-	   
+		  assertEquals(1, specie.getArea());  
+
+	    }
+	  
+	  @Test
+	  public void testGetAnimals(){		
+		  assertEquals(listAnimal, specie.getAnimals());  
 
 	    }
 	
-	
+	  @Test
+	  public void testGetName(){		
+		  assertEquals("chien", specie.getName());  
+
+	    }
 	
 	
 	
