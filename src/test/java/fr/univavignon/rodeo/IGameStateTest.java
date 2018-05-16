@@ -28,21 +28,17 @@ public class IGameStateTest {
 		
 	    public static  IGameState MockGameState(){
 	        gameState=Mockito.mock(IGameState.class);
-	        //environement = IEnvironmentTest.MockEnvironement();
+	        
 	        Mockito.when(gameState.getName()).thenReturn("partie State");
 	        Mockito.when(gameState.getProgression()).thenReturn(70);
 	        specie= ISpecieTest.MockSpecie();
-	      // bimbo = new IAnimalTest().MockAnimal();
+	
 	        
 	        doThrow(new IllegalArgumentException()).when(gameState).catchAnimal(null);
-	        doThrow(new IllegalStateException()).when(gameState).catchAnimal(bimbo);
-	        doThrow(new IllegalArgumentException()).when(gameState).getSpecieLevel(specie);
-	        
-	        Mockito.doThrow(new IllegalStateException()).when(gameState).exploreArea();
-	     //  Mockito.when(gameState.getSpecieLevel(specie)).thenReturn(SpecieLevel.NOVICE);
-	        
-	        
-	        
+	        doThrow(new IllegalStateException()).when(gameState).catchAnimal(bimbo);	        
+	        Mockito.doThrow(new IllegalStateException()).when(gameState).exploreArea();  	  
+	    	
+	    	Mockito.when(gameState.getSpecieLevel(specie)).thenReturn(SpecieLevel.NOVICE);	        
 	        
 	        return gameState;
 	        
@@ -84,11 +80,8 @@ public class IGameStateTest {
 	   
 	    @Test
 	    public void testGetSpecieLevel(){
-	    	ISpecie iSpecie = ISpecieTest.MockSpecie();
-	  
 	    	
-	    	  Mockito.when(gameState.getSpecieLevel(iSpecie)).thenReturn(SpecieLevel.CHAMPION);
-	    	assertEquals(SpecieLevel.CHAMPION, gameState.getSpecieLevel(iSpecie));
+	    	assertEquals(SpecieLevel.NOVICE, gameState.getSpecieLevel(specie));
 	    	
 	    	
 	    }
