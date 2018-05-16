@@ -48,7 +48,7 @@ public class IEnvironmentProviderTest {
 	    @Test
 	    public void testGetEnvironment(){ 	
 	    	
-	    	assertEquals("facile",environementProvider.getEnvironment("dificile").getName());
+	    	assertEquals("dificile",environementProvider.getEnvironment("dificile").getName());
 	    	
 	    }
 	    
