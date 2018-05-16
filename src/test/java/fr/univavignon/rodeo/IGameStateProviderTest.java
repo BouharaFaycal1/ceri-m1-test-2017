@@ -10,12 +10,11 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 import fr.univavignon.rodeo.api.IAnimal;
-import fr.univavignon.rodeo.api.IEnvironment;
-import fr.univavignon.rodeo.api.IEnvironmentProvider;
+
 import fr.univavignon.rodeo.api.IGameState;
 import fr.univavignon.rodeo.api.IGameStateProvider;
 import fr.univavignon.rodeo.api.ISpecie;
-import fr.univavignon.rodeo.api.SpecieLevel;
+
 
 public class IGameStateProviderTest {
 	
@@ -23,32 +22,20 @@ public class IGameStateProviderTest {
 
 		
 		
-		static IGameStateProvider gameStateProvider;
-		
-		static IGameState gameState;
-		
-		static ISpecie specie;
-		
-		static ArrayList<ISpecie> listeSpices;	
-		
-		static IAnimal bimbo =new IAnimalTest().MockAnimal();
+		static IGameStateProvider gameStateProvider;		
+		static IGameState gameState;	
 			
 		
-		    public static  IGameStateProvider MockGameStateProvider(){
-		    	
+		    public static  IGameStateProvider MockGameStateProvider(){		    	
 		    
 		        gameStateProvider=Mockito.mock(IGameStateProvider.class);		        
 		        Mockito.doThrow(new IllegalArgumentException()).when(gameStateProvider).get(null);
 		        
 		        gameState = IGameStateTest.MockGameState();			        
-		        Mockito.when(gameStateProvider.get("nothink")).thenReturn(gameState); 
+		        Mockito.when(gameStateProvider.get("nothink")).thenReturn(gameState);        
 		        
-		       
-		        
-		        return gameStateProvider;
-		        
-		 }
-		    
+		        return gameStateProvider;		        
+		 }  
 		    
 		    
 		    @Before  
