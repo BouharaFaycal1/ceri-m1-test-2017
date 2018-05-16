@@ -4,12 +4,12 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
-import org.junit.Before;
+
 import org.junit.Test;
 import org.mockito.Mockito;
-import org.omg.CORBA.Environment;
 
-import fr.univavignon.rodeo.api.IAnimal;
+
+
 import fr.univavignon.rodeo.api.IEnvironment;
 import fr.univavignon.rodeo.api.ISpecie;
 
