@@ -10,9 +10,9 @@ import fr.univavignon.rodeo.api.ISpecie;
 
 public class IEnvironmentTest {
 	
-	public static ISpecie specie;	
-	public static ArrayList<ISpecie> listSpecies;	
-	public static IEnvironment environement;
+	 static ISpecie specie;	
+	 static ArrayList<ISpecie> listSpecies;	
+	 static IEnvironment environement;
 
 		
 	    public static  IEnvironment mockEnvironement(){

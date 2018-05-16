@@ -9,8 +9,8 @@ import fr.univavignon.rodeo.api.IGameStateProvider;
 
 public class IGameStateProviderTest {		
 		
-	public static IGameStateProvider gameStateProvider;		
-	public static IGameState gameState;		
+	 static IGameStateProvider gameStateProvider;		
+	 static IGameState gameState;		
 		
 		    public static  IGameStateProvider mockGameStateProvider(){		    	
 		    
