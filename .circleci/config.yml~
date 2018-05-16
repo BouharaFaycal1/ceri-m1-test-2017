@@ -22,12 +22,12 @@ jobs:
     
     steps:
       - checkout
-
-      # Download and cache dependencies
+public
+      # Downloadpublic and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "pom.xml" }}
-          # fallback to using the latest cache if no exact match is found
+          # fallpublicback to using the latest cache if no exact match is found
           - v1-dependencies-
 
       - run: mvn dependency:go-offline
@@ -39,3 +39,5 @@ jobs:
         
       # run tests!
       - run: mvn integration-test
+      - run: bash <(curl -s https://codecov.io/bash) -t edc65b6b-004f-40c0-91f0-20f5f3c4c336
+      
