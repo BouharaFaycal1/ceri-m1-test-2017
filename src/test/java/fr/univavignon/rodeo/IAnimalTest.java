@@ -27,14 +27,17 @@ public class IAnimalTest {
         return animal;
      }
    
-   
- 
+ @Before  
+ public void initialisation(){
+	 animal=MockAnimal();
+	 
+ }
     
  
    
     @Test
     public void testIsBoss(){
-    	animal =MockAnimal();
+    	
     assertEquals(false,animal.isBoss());
   
 
@@ -43,7 +46,7 @@ public class IAnimalTest {
     
     @Test
     public void testIsSecret(){
-    	animal =MockAnimal();
+    	
     assertEquals(true,animal.isSecret());
    
 
@@ -51,14 +54,14 @@ public class IAnimalTest {
     
     @Test
     public void testisEndangered(){
-    	animal =MockAnimal();
+    	
     assertEquals(false,animal.isEndangered());
    
 
     }
     @Test
     public void testisgetName(){
-    	animal =MockAnimal();
+    	
     assertEquals("bimbo",animal.getName());
    
 

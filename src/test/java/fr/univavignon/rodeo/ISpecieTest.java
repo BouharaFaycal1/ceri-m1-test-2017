@@ -2,10 +2,9 @@ package fr.univavignon.rodeo;
 
 import static org.junit.Assert.*;
 
-
 import java.util.ArrayList;
 
-
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -44,17 +43,22 @@ public class ISpecieTest {
 	 }
 	 
 	
+	    @Before  
+	    public void initialisation(){
+	    	 specie =MockSpecie();
+	   	 
+	    }
 	   
 	  @Test
 	  public void testGetArea(){
-		  specie =MockSpecie();
+		 
 		  assertEquals(1, specie.getArea());  
 
 	    }
 	  
 	  @Test
 	  public void testGetAnimals(){	
-		  specie =MockSpecie();
+		  
 		  assertEquals(listAnimal, specie.getAnimals());  
 
 	    }

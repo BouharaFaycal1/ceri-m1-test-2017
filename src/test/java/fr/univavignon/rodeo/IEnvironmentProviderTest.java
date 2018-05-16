@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -41,11 +42,16 @@ public class IEnvironmentProviderTest {
 	        
 	 }
 	    
+	    @Before  
+	    public void initialisation(){
+	    	environementProvider=MockEnvironementProvider();
+	   	 
+	    }
 	    
 	    @Test
 	    public void testGetAvailableEnvironments(){
 	    	
-	    	environementProvider=MockEnvironementProvider();
+	    	
 	    	assertEquals(environementName,environementProvider.getAvailableEnvironments());
 	    	
 	    }
@@ -53,7 +59,7 @@ public class IEnvironmentProviderTest {
 	    @Test
 	    public void testGetEnvironment(){
 	    	
-	    	environementProvider=MockEnvironementProvider();
+	    	
 	    	assertEquals("facile",environementProvider.getEnvironment("facile").getName());
 	    	
 	    }

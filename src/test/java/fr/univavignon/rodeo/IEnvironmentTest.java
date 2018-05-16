@@ -4,9 +4,10 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
-
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
+
 
 
 
@@ -39,11 +40,17 @@ public class IEnvironmentTest {
 	        return environement;
 	        
 	 }
+	    
+	    @Before  
+	    public void initialisation(){
+	    	environement=MockEnvironement();
+	   	 
+	    }
 	 
 	
 	 @Test
 	 public void testGetAreas(){
-		environement=MockEnvironement();
+		
 	assertEquals(1,environement.getAreas());	 
 		 
 		 
@@ -52,7 +59,7 @@ public class IEnvironmentTest {
 	 
 	 @Test
 	 public void testGetSpecies(){
-		 environement=MockEnvironement();
+		 
 		 assertEquals(listSpecies,environement.getSpecies());
 		 
 		 

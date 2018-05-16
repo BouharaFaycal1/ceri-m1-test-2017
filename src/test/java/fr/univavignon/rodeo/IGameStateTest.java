@@ -2,6 +2,7 @@ package fr.univavignon.rodeo;
 
 import java.util.ArrayList;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -46,11 +47,17 @@ public class IGameStateTest {
 	    
 	    
 	    
+	    @Before  
+	    public void initialisation(){
+	    	gameState= MockGameState();
+	   	 
+	    }
+	    
 	    
 	    @Test
 	    public void testGetProgression(){
 	    	
-	    	gameState= MockGameState();
+	    	
 	    	assertEquals(70,gameState.getProgression());
 	    }
 	    
@@ -59,22 +66,22 @@ public class IGameStateTest {
 	    @Test(expected=IllegalArgumentException.class)
 	    public void testCatchAnimal(){
 	    	
-	    gameState.catchAnimal(null);
+	    	gameState.catchAnimal(null);
 	    }
 	    
 	    
 	    @Test(expected=IllegalStateException.class)
 	    public void testCatchAnimall(){
 	    	
-	    gameState.catchAnimal(bimbo);
+	    	gameState.catchAnimal(bimbo);
 	    }
 	    
 	    
 	    
 	    @Test(expected=IllegalStateException.class)
 	    public void testExploreArea(){
-	    	gameState= MockGameState();	
-	    gameState.exploreArea();
+	    	
+	    	gameState.exploreArea();
 	    }
 	    
 	   
