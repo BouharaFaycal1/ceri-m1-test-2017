@@ -11,10 +11,10 @@ import fr.univavignon.rodeo.api.ISpecie;
 
 public class IEnvironmentProviderTest {
 	
-	public static IEnvironmentProvider environementProvider; 	
-	public static ISpecie specie;	
-	public static ArrayList<String> environementName;	
-	public static IEnvironment environement;
+	private static IEnvironmentProvider environementProvider; 	
+	private static ISpecie specie;	
+	private static ArrayList<String> environementName;	
+	private static IEnvironment environement;
 		
 	    public static  IEnvironmentProvider mockEnvironementProvider(){
 	    	

@@ -10,9 +10,9 @@ import fr.univavignon.rodeo.api.ISpecie;
 
 public class ISpecieTest {
 	
-	public static IAnimal animal;
-	public static ISpecie specie;	
-	public static ArrayList<IAnimal> listAnimal;	
+	private static IAnimal animal;
+	private static ISpecie specie;	
+	private static ArrayList<IAnimal> listAnimal;	
 	
 	
 		
