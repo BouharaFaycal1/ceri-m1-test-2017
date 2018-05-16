@@ -11,7 +11,7 @@ import fr.univavignon.rodeo.api.ISpecie;
 
 public class IEnvironmentProviderTest {
 	
-	public static IEnvironmentProvider environementProvider; 	
+	 static IEnvironmentProvider environementProvider; 	
 	public static ISpecie specie;	
 	public static ArrayList<String> environementName;	
 	public static IEnvironment environement;
