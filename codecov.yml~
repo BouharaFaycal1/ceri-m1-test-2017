@@ -1,1 +1,3 @@
 curl --data-binary @- https://codecov.io/validate
+codecov:
+  token: edc65b6b-004f-40c0-91f0-20f5f3c4c336
