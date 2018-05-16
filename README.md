@@ -1,5 +1,12 @@
 # ceri-m2-test
 
+### Author: BOUHARA Fayçal & KHARMOUCH Anas
+
+- [Codacy](https://app.codacy.com/app/BouharaFaycal1/ceri-m1-test-2017/dashboard)
+
+- [Circleci](https://circleci.com/gh/BouharaFaycal1)
+
+
 ## Resources
 
 ### Cours

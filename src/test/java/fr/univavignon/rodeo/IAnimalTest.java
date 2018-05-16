@@ -20,26 +20,24 @@ public class IAnimalTest {
         Mockito.when(animal.isBoss()).thenReturn(false);
         Mockito.when(animal.getName()).thenReturn("bimbo");
         Mockito.when(animal.getXP()).thenReturn(8);
-        Mockito.when(animal.isSecret()).thenReturn(true);
-    
+        Mockito.when(animal.isSecret()).thenReturn(true);    
         Mockito.when(animal.isEndangered()).thenReturn(false);
     
         return animal;
-     }
+    }
    
- @Before  
- public void initialisation(){
-	 animal=MockAnimal();
-	 
- }
+	 @Before  
+	 public void initialisation(){
+		 animal=MockAnimal();
+		 
+	 }
     
  
    
     @Test
     public void testIsBoss(){
     	
-    assertEquals(false,animal.isBoss());
-  
+    assertEquals(false,animal.isBoss());  
 
     }
     
@@ -47,8 +45,7 @@ public class IAnimalTest {
     @Test
     public void testIsSecret(){
     	
-    assertEquals(true,animal.isSecret());
-   
+    assertEquals(true,animal.isSecret());   
 
     }
     
@@ -56,14 +53,13 @@ public class IAnimalTest {
     public void testisEndangered(){
     	
     assertEquals(false,animal.isEndangered());
-   
-
+    
     }
+    
     @Test
     public void testisgetName(){
     	
-    assertEquals("bimbo",animal.getName());
-   
+    assertEquals("bimbo",animal.getName());   
 
     }
     

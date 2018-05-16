@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
-
 import fr.univavignon.rodeo.api.IAnimal;
 import fr.univavignon.rodeo.api.IEnvironment;
 import fr.univavignon.rodeo.api.IEnvironmentProvider;
@@ -15,48 +14,40 @@ import fr.univavignon.rodeo.api.SpecieLevel;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.doThrow;
 
-public class IGameStateTest {
-	
+public class IGameStateTest {	
 	
 	static IGameState gameState;
 	static IEnvironmentProvider environementProvider; 
-	
-	static ISpecie specie;
-	
+	static ISpecie specie;	
 	static ArrayList<ISpecie> listeSpices;	
 	static IEnvironment environement;
 	static IAnimal bimbo =new IAnimalTest().MockAnimal();
 		
 	    public static  IGameState MockGameState(){
-	        gameState=Mockito.mock(IGameState.class);
-	        
+	        gameState=Mockito.mock(IGameState.class);	        
 	        Mockito.when(gameState.getName()).thenReturn("partie State");
 	        Mockito.when(gameState.getProgression()).thenReturn(70);
-	        specie= ISpecieTest.MockSpecie();
-	
-	        
+	        specie= ISpecieTest.MockSpecie();        
 	        doThrow(new IllegalArgumentException()).when(gameState).catchAnimal(null);
 	        doThrow(new IllegalStateException()).when(gameState).catchAnimal(bimbo);	        
-	        Mockito.doThrow(new IllegalStateException()).when(gameState).exploreArea();  	  
-	    	
+	        Mockito.doThrow(new IllegalStateException()).when(gameState).exploreArea();	    	
 	    	Mockito.when(gameState.getSpecieLevel(specie)).thenReturn(SpecieLevel.NOVICE);	        
 	        
 	        return gameState;
 	        
-	 }
+	    }
 	    
 	    
 	    
 	    @Before  
 	    public void initialisation(){
-	    	gameState= MockGameState();
-	   	 
+	    	
+	    	gameState= MockGameState();	   	 
 	    }
 	    
 	    
 	    @Test
-	    public void testGetProgression(){
-	    	
+	    public void testGetProgression(){	
 	    	
 	    	assertEquals(70,gameState.getProgression());
 	    }
@@ -88,8 +79,7 @@ public class IGameStateTest {
 	    @Test
 	    public void testGetSpecieLevel(){
 	    	
-	    	assertEquals(SpecieLevel.NOVICE, gameState.getSpecieLevel(specie));
-	    	
+	    	assertEquals(SpecieLevel.NOVICE, gameState.getSpecieLevel(specie));    	
 	    	
 	    }
 	    

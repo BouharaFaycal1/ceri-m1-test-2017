@@ -1,13 +1,10 @@
 package fr.univavignon.rodeo;
 
 import static org.junit.Assert.*;
-
 import java.util.ArrayList;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
-
 import fr.univavignon.rodeo.api.IAnimal;
 import fr.univavignon.rodeo.api.ISpecie;
 
@@ -20,9 +17,7 @@ import fr.univavignon.rodeo.api.ISpecie;
 public class ISpecieTest {
 	
 	static IAnimal animal;
-
-	static ISpecie specie;
-	
+	static ISpecie specie;	
 	static ArrayList<IAnimal> listAnimal;	
 	
 	
@@ -30,12 +25,9 @@ public class ISpecieTest {
 	    public static  ISpecie MockSpecie(){
 	        specie=Mockito.mock(ISpecie.class);
 	        Mockito.when(specie.getArea()).thenReturn(1);
-	        animal= IAnimalTest.MockAnimal();
-	        
+	        animal= IAnimalTest.MockAnimal();	        
 	        listAnimal = new ArrayList();
-	        listAnimal.add(animal);
-	        
-	        
+	        listAnimal.add(animal);	        	        
 	        Mockito.when(specie.getAnimals()).thenReturn(listAnimal);
 	        Mockito.when(specie.getName()).thenReturn("chien");
 	        return specie;
