@@ -1,18 +1,13 @@
 package fr.univavignon.rodeo;
 
-
-
 import fr.univavignon.rodeo.api.IAnimal;
-
 import org.junit.*;
 import org.mockito.*;
-
 import static org.junit.Assert.*;
-
 
 public class IAnimalTest {
 
-   static IAnimal animal=null;
+   static IAnimal animal;
    
     
     public static  IAnimal mockAnimal(){
