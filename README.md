@@ -1,6 +1,6 @@
 # ceri-m2-test
 
-### Author: BOUHARA Fayçal & KHARMOUCH Anas
+## Author: BOUHARA Fayçal & KHARMOUCH Anas
 
 - [Codacy](https://app.codacy.com/app/BouharaFaycal1/ceri-m1-test-2017/dashboard)
 
@@ -21,7 +21,7 @@
 - [TP3 : Unit testing](https://github.com/Faylixe/ceri-m2-test-2017/blob/master/docs/tp3.md)
 
 
-### Author: Binômes: BOUHARA Fayçal & KHARMOUCH Anas
+
 
 
 ### External
