@@ -16,12 +16,12 @@ import static org.mockito.Mockito.doThrow;
 
 public class IGameStateTest {	
 	
-	 static IGameState gameState;
-	 static IEnvironmentProvider environementProvider; 
-	 static ISpecie specie;	
-	 static ArrayList<ISpecie> listeSpices;	
-	 static IEnvironment environement;
-	 static IAnimal bimbo =new IAnimalTest().mockAnimal();
+	public static IGameState gameState;
+	public static IEnvironmentProvider environementProvider; 
+	public static ISpecie specie;	
+	public static ArrayList<ISpecie> listeSpices;	
+	public static IEnvironment environement;
+	public static IAnimal bimbo =new IAnimalTest().mockAnimal();
 		
 	    public static  IGameState mockGameState(){
 	        gameState=Mockito.mock(IGameState.class);	        
