@@ -15,11 +15,11 @@ public class IEnvironmentTest {
 	static IEnvironment environement;
 
 		
-	    public static  IEnvironment MockEnvironement(){
+	    public static  IEnvironment mockEnvironement(){
 	    	
 	        environement=Mockito.mock(IEnvironment.class);	        
 	        Mockito.when(environement.getAreas()).thenReturn(1);
-	        specie= ISpecieTest.MockSpecie();	        
+	        specie= ISpecieTest.mockSpecie();	        
 	        listSpecies = new ArrayList();
 	        listSpecies.add(specie);	        
 	        Mockito.when(environement.getName()).thenReturn("mon environement");
@@ -30,7 +30,7 @@ public class IEnvironmentTest {
 	    
 	    @Before  
 	    public void initialisation(){
-	    	environement=MockEnvironement();
+	    	environement=mockEnvironement();
 	   	 
 	    }
 	 

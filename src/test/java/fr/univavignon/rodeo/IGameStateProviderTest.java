@@ -12,11 +12,11 @@ public class IGameStateProviderTest {
 		static IGameStateProvider gameStateProvider;		
 		static IGameState gameState;		
 		
-		    public static  IGameStateProvider MockGameStateProvider(){		    	
+		    public static  IGameStateProvider mockGameStateProvider(){		    	
 		    
 		        gameStateProvider=Mockito.mock(IGameStateProvider.class);		        
 		        Mockito.doThrow(new IllegalArgumentException()).when(gameStateProvider).get(null);		        
-		        gameState = IGameStateTest.MockGameState();			        
+		        gameState = IGameStateTest.mockGameState();			        
 		        Mockito.when(gameStateProvider.get("nothink")).thenReturn(gameState);	        
 		        return gameStateProvider;		        
 		    }  
@@ -25,7 +25,7 @@ public class IGameStateProviderTest {
 		    @Before  
 		    public void initialisation(){
 		    	
-		    	gameStateProvider= MockGameStateProvider();
+		    	gameStateProvider= mockGameStateProvider();
 		    	
 		    }
 	

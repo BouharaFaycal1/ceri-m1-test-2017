@@ -21,13 +21,13 @@ public class IGameStateTest {
 	static ISpecie specie;	
 	static ArrayList<ISpecie> listeSpices;	
 	static IEnvironment environement;
-	static IAnimal bimbo =new IAnimalTest().MockAnimal();
+	static IAnimal bimbo =new IAnimalTest().mockAnimal();
 		
-	    public static  IGameState MockGameState(){
+	    public static  IGameState mockGameState(){
 	        gameState=Mockito.mock(IGameState.class);	        
 	        Mockito.when(gameState.getName()).thenReturn("partie State");
 	        Mockito.when(gameState.getProgression()).thenReturn(70);
-	        specie= ISpecieTest.MockSpecie();        
+	        specie= ISpecieTest.mockSpecie();        
 	        doThrow(new IllegalArgumentException()).when(gameState).catchAnimal(null);
 	        doThrow(new IllegalStateException()).when(gameState).catchAnimal(bimbo);	        
 	        Mockito.doThrow(new IllegalStateException()).when(gameState).exploreArea();	    	
@@ -42,7 +42,7 @@ public class IGameStateTest {
 	    @Before  
 	    public void initialisation(){
 	    	
-	    	gameState= MockGameState();	   	 
+	    	gameState= mockGameState();	   	 
 	    }
 	    
 	    

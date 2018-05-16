@@ -15,7 +15,7 @@ public class IAnimalTest {
    static IAnimal animal=null;
    
     
-    public static  IAnimal MockAnimal(){
+    public static  IAnimal mockAnimal(){
     	IAnimal animal=Mockito.mock(IAnimal.class);
         Mockito.when(animal.isBoss()).thenReturn(false);
         Mockito.when(animal.getName()).thenReturn("bimbo");
@@ -28,7 +28,7 @@ public class IAnimalTest {
    
 	 @Before  
 	 public void initialisation(){
-		 animal=MockAnimal();
+		 animal=mockAnimal();
 		 
 	 }
     

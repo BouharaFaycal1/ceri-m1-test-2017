@@ -16,13 +16,13 @@ public class IEnvironmentProviderTest {
 	static ArrayList<String> environementName;	
 	static IEnvironment environement;
 		
-	    public static  IEnvironmentProvider MockEnvironementProvider(){
+	    public static  IEnvironmentProvider mockEnvironementProvider(){
 	    	
 	        environementProvider=Mockito.mock(IEnvironmentProvider.class);
-	        environement = IEnvironmentTest.MockEnvironement();
+	        environement = IEnvironmentTest.mockEnvironement();
 	        Mockito.when(environement.getName()).thenReturn("facile");	        
 	        Mockito.when(environement.getAreas()).thenReturn(1);
-	        specie= ISpecieTest.MockSpecie();	        
+	        specie= ISpecieTest.mockSpecie();	        
 	        environementName = new ArrayList();
 	        environementName.add(environement.getName());	        
 	        Mockito.when(environementProvider.getAvailableEnvironments()).thenReturn(environementName);
@@ -34,7 +34,7 @@ public class IEnvironmentProviderTest {
 	    
 	    @Before  
 	    public void initialisation(){
-	    	environementProvider=MockEnvironementProvider();
+	    	environementProvider=mockEnvironementProvider();
 	   	 
 	    }
 	    
