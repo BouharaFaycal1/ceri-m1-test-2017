@@ -1,5 +1,7 @@
 # ceri-m2-test
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6f6f20b177424143b49babc9d9d5be70)](https://app.codacy.com/app/BouharaFaycal1/ceri-m1-test-2017?utm_source=github.com&utm_medium=referral&utm_content=BouharaFaycal1/ceri-m1-test-2017&utm_campaign=badger)
+
 ## Author: BOUHARA Fayçal & KHARMOUCH Anas
 
 - [Codacy](https://app.codacy.com/app/BouharaFaycal1/ceri-m1-test-2017/dashboard)
