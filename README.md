@@ -6,7 +6,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9381d91db603483f955e477dd64d3728)](https://www.codacy.com/app/BouharaFaycal1/ceri-m1-test-2017?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BouharaFaycal1/ceri-m1-test-2017&amp;utm_campaign=Badge_Grade)
 
-[![codecov](https://codecov.io/gh/BouharaFaycal1/ceri-m1-test-2017/branch/master/graph/badge.svg)](https://codecov.io/gh/BouharaFaycal1/ceri-m1-test-2017)
+
 
 ## Resources
 
